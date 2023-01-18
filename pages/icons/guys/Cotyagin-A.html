@@ -1,0 +1,130 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="../../../assets/css/fonts.css">
+    <!-- <link rel="stylesheet" href="../../../assets/css/icons.css"> -->
+    <link rel="stylesheet" href="../../../assets/css/history.css">
+    <title>История Мстёрского края</title>
+</head>
+<body>
+    <main>
+        <div class="left_side">
+            <div class="head">
+                <div class="h_i">
+                    <div class="h_uline"></div>
+                    <div class="h_title">МСТЁРСКИЙ<br>ХУДОЖЕСТВЕННЫЙ МУЗЕЙ</div>
+                    <div class="h_dline">
+                        <div class="h_lline"></div>
+                        <img src="../../../assets/images/h_l.svg" alt="" class="h_img">
+                        <div class="h_lline"></div>
+                    </div>
+                </div>
+            </div>
+            <div class="menu_ls">
+                <div class="menu_item">
+                    <img src="../../../assets/images/decor_mi.png" alt="">
+                    <a href="" class="menu_nav active">ИКОНОПИСЦЫ</a>
+                </div>
+                <div class="menu_item">
+                    <img src="../../../assets/images/decor_mi.png" alt="">
+                    <a href="../../icons/icon.html" class="menu_nav">
+                        ИКОНОПИСНЫЕ<br> МАСТЕРСКИЕ 
+                    </a>
+                </div>
+                <div class="menu_item">
+                    <img src="../../../assets/images/decor_mi.png" alt="">
+                    <a href="./../icons.html" class="menu_nav">
+                        ИКОНЫ
+                    </a>
+                </div>
+            </div>
+            <div class="menu_img">
+                <img src="../../../assets/images/decor_history.png" alt="">
+            </div>
+            <!-- </div> -->
+            <div class="menu_img">
+                <img src="../../../assets/images/decor_history.png" alt="">
+            </div>
+        </div>
+        <div class="right_side">
+            <div class="head">
+                <div class="h_i">
+                    <div class="h_uline"></div>
+                    <div class="h_middle">
+                       <a href="../guys/Kiricov-V.html"><img src="../../../assets/images/fiol_btnL.svg" alt=""></a>
+                        Иконы <span>XVIII -</span> начала <span>XX</span> вв
+                        <img src="../../../assets/images/decor_title.png" alt="">
+                    </div>
+                    <div class="h_uline"></div>
+                </div>
+            </div>
+            <div class="rs_main rs_main_65">
+                <div class="up_rs_guy">
+                    <div class="up_rs_name">
+                        <a href="../guys/Klykov-N.html"><img src="../../../assets/images/fiol_btnL.svg" alt=""></a>
+                        <div class="up_rs_name_i">КОТЯГИН А. Ф.</div>
+                        <a href="../guys/Krotov-V.html"><img src="../../../assets/images/fiol_btnR.svg" alt=""></a>
+                    </div>
+                    <div class="up_rs_line"></div>
+                </div>
+                <div class="guy_info">
+                    <div class="guy_info_img">
+                        <img class="lw_f" src="../../../assets/images/Aleksandr_Fedorovich_Kotyagin_ 1.jpg" alt="">
+                    </div>
+                    <div class="guy_info_txt">
+                        <p class="mb-1"><strong>Котягин Александр Федорович (1882-1943) </strong></p>
+                        <div class="text_container" style="overflow: auto;">
+                            <div class="slide_items_txt">
+                                <div class="slide_item_txt">
+                                    <p class="guy_info_title">
+                                        Иконописец. Реставратор. Художник-миниатюрист. Педагог. Родился<br> во Мстёре. Из семьи иконописцев. С 1893 по 1897 год учился в<br>  Мстёрской иконописной школе. Работал в иконописных мастерских<br>  Мстёры (1897-1903) и Москвы (1903-1915). Расписывал церкви<br> , занимался написанием и реставрацией икон. Один из организаторов<br>  «Артели древнерусской живописи» (1923) и артели «Пролетарское<br>  искусство» (1931). Основоположник мстёрской лаковой миниатюрной<br>  живописи. Участник художественных выставок с 1933 г. Награжден<br>  дипломом и золотой медалью на Всемирной выставке в Париже (1937).<br>  Член Союза художников СССР с 1940 г. Преподавал миниатюрную<br>  живопись в Мстёрской художественной профтехшколе с 1932 года.
+                                    </p>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <div class="btn_cont">
+                <a href="../../../pages/icons/icon_dos.html" class="btn_back">Назад</a>
+            </div>
+        </div>
+    </main>
+    <script>
+        let offset = 0; // смещение 
+            const sliderLine = document.querySelector('.slide_items_txt');
+
+            const movePx = document.querySelector('.slide_item_txt').clientHeight;
+            const lengthElement = document.querySelectorAll('.slide_item_txt').length;
+
+            const lll = sliderLine.clientHeight;
+            console.log(lll)
+
+
+            document.querySelector('.btn_down').addEventListener("click", function () {
+                offset = offset + 100;
+                // if (offset > ((lengthElement-1)*movePx)) {
+                //     offset = 0;
+                // }
+                if (offset > 150) {
+                    offset = 150;
+                }
+                sliderLine.style.top = -offset + 'px';
+            });
+
+            document.querySelector('.btn_up').addEventListener("click", function () {
+                offset = offset - 100;
+                // if (offset < 0) {
+                //     offset = ((lengthElement-1)*movePx);
+                // }
+                if (offset < 0) {
+                    offset = 0;
+                }
+                sliderLine.style.top = -offset + 'px';
+            });
+    </script>
+</body>
+</html>

@@ -1,0 +1,144 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="../../../assets/css/fonts.css">
+    <!-- <link rel="stylesheet" href="../../../assets/css/icons.css"> -->
+    <link rel="stylesheet" href="../../../assets/css/history.css">
+    <title>История Мстёрского края</title>
+</head>
+<body>
+    <main>
+        <div class="left_side">
+            <div class="head">
+                <div class="h_i">
+                    <div class="h_uline"></div>
+                    <div class="h_title">МСТЁРСКИЙ<br>ХУДОЖЕСТВЕННЫЙ МУЗЕЙ</div>
+                    <div class="h_dline">
+                        <div class="h_lline"></div>
+                        <img src="../../../assets/images/h_l.svg" alt="" class="h_img">
+                        <div class="h_lline"></div>
+                    </div>
+                </div>
+            </div>
+            <div class="menu_ls">
+                <div class="menu_item">
+                    <img src="../../../assets/images/decor_mi.png" alt="">
+                    <a href="" class="menu_nav active">ИКОНОПИСЦЫ</a>
+                </div>
+                <div class="menu_item">
+                    <img src="../../../assets/images/decor_mi.png" alt="">
+                    <a href="../../icons/icon.html" class="menu_nav">
+                        ИКОНОПИСНЫЕ<br> МАСТЕРСКИЕ 
+                    </a>
+                </div>
+                <div class="menu_item">
+                    <img src="../../../assets/images/decor_mi.png" alt="">
+                    <a href="./../icons.html" class="menu_nav">
+                        ИКОНЫ
+                    </a>
+                </div>
+            </div>
+            <div class="menu_img">
+                <img src="../../../assets/images/decor_history.png" alt="">
+            </div>
+            <!-- </div> -->
+            <div class="menu_img">
+                <img src="../../../assets/images/decor_history.png" alt="">
+            </div>
+        </div>
+        <div class="right_side">
+            <div class="head">
+                <div class="h_i">
+                    <div class="h_uline"></div>
+                    <div class="h_middle">
+                        <img src="../../../assets/images/decor_title.png" alt="">
+                        Иконы <span>XVIII -</span> начала <span>XX</span> вв
+                        <img src="../../../assets/images/decor_title.png" alt="">
+                    </div>
+                    <div class="h_uline"></div>
+                </div>
+            </div>
+            <div class="rs_main" style="height: 65%;">
+                <div class="up_rs_guy">
+                    <div class="up_rs_name">
+                        <a href="../guys/Antonovskiy-F.html"><img src="../../../assets/images/fiol_btnL.svg" alt=""></a>
+                        <div class="up_rs_name_i">БРЯГИН А.И</div>
+                        <a href="../guys/Golubev-V.html"><img src="../../../assets/images/fiol_btnR.svg" alt=""></a>
+                    </div>
+                    <div class="up_rs_line"></div>
+                </div>
+                <div class="guy_info">
+                    <div class="guy_info_img">
+                        <img src="../../../assets/images/bryagin.jpg" alt="">
+                    </div>
+                    <div class="guy_info_txt git_big" style="margin-bottom: 2rem;"> 
+                        <p><strong>Брягин Александр Иванович (1888—1949)</strong></p>
+                        <div class="text_container" style="overflow: auto;">
+                            <div class="slide_items_txt">
+                                <div class="slide_item_txt">
+                                    <p class="guy_info_title">
+                                        Советский художник-миниатюрист и реставратор иконописи. Родился в
+                                        Мстёре, в семье потомственного иконописца И. В. Брягина. Учился в
+                                        иконописной мастерской и частной художественной студии Паманского,
+                                        посещал различные художественные кружки. Долгое время был иконописцем
+                                        и реставратором в Москве - у коллекционера И. С. Остроухова, и в Санкт-
+                                        Петербурге - в Русском музее. В числе крупнейших реставраторов был
+                                        приглашён в 1912 году для расчистки «Троицы» Рублёва. После революции
+                                        участвовал в реставрации фресок в Московском Кремле. В 1923 году одним
+                                        из первых вступил в «Артель древнерусской живописи» (1923-1925). В 1927
+                                        —1930 годах работал в Вологде. Внёс неоценимый вклад в спасение
+                                        шедевров вологодской иконописи от уничтожения, разрушения и продажи за
+                                        границу в 1930-е годы. Преподавал лаковую миниатюрную живопись в
+                                        мстёрской художественной профтехшколе ((1932-1937). Награжден
+                                        дипломом и золотой медалью на Всемирной выставке в Париже (1937). Член
+                                        Союза художников СССР с 1940 г.
+                                    </p>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <div class="btn_cont">
+                <a href="../../../pages/icons/icon_dos.html" class="btn_back" style="margin-top: 0;">Назад</a>
+            </div>
+        </div>
+    </main>
+    <script>
+        let offset = 0; // смещение 
+            const sliderLine = document.querySelector('.slide_items_txt');
+
+            const movePx = document.querySelector('.slide_item_txt').clientHeight;
+            const lengthElement = document.querySelectorAll('.slide_item_txt').length;
+
+            const lll = sliderLine.clientHeight;
+            console.log(lll)
+
+
+            document.querySelector('.btn_down').addEventListener("click", function () {
+                offset = offset + 100;
+                // if (offset > ((lengthElement-1)*movePx)) {
+                //     offset = 0;
+                // }
+                if (offset > 360) {
+                    offset = 360;
+                }
+                sliderLine.style.top = -offset + 'px';
+            });
+
+            document.querySelector('.btn_up').addEventListener("click", function () {
+                offset = offset - 100;
+                // if (offset < 0) {
+                //     offset = ((lengthElement-1)*movePx);
+                // }
+                if (offset < 0) {
+                    offset = 0;
+                }
+                sliderLine.style.top = -offset + 'px';
+            });
+    </script>
+</body>
+</html>

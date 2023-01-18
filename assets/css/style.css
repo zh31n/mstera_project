@@ -1,0 +1,142 @@
+
+
+*,
+*::after,
+*::before {
+    margin: 0;
+    -webkit-box-sizing: border-box;
+    box-sizing: border-box;
+}
+
+h1 {
+    margin: 0;
+    padding: 0;
+}
+
+/* Fonts */
+
+/* .h_uline{
+    font-family: 'Ceremonious One';
+    font-family: 'Bodoni', arial;
+    font-weight: 400;
+} */
+
+/***************** HEADER ***********************/
+
+body{
+    /* background: linear-gradient(180deg, #4D405A 0%, #2F283A 100%); */
+    /* height: 100vh; */
+    background: #33233b;
+    width: 100%;
+    /* color:white; */
+}
+
+
+.header{
+    height: 150px;
+    width: 100%;
+    background-color: #201625;
+    display: flex;  
+    justify-content: center;
+    align-items: center;
+    margin-top: 1rem;
+}
+
+.h_inner{
+    width: 100%;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    padding-top: 1rem;
+    height: 100%;
+}
+
+.h_lline{
+    width: 100%;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+.h_left,.h_right,.h_middle,.h_uline{
+    background-color: #8E7D73;
+    height: 2px;
+}
+
+.h_left,.h_right{width: 10%;}
+
+.h_middle{width: 80%;}
+
+.h_title{
+    font-family: 'Bodoni';
+    /* font-weight: 300; */
+    font-size: 50px;
+    text-align: center;
+    color: #F5DAAF;
+}
+
+.h_lline img{
+    width: 100px;
+}
+
+.h_uline{width: 100%;}
+
+
+.m_inner{height: 100%;width: 100%;}
+
+.m_img{
+    width: 100%;
+    height: 500px;
+    /* margin-top: 2rem; */
+    position: absolute;
+    bottom: 0;
+    /* object-fit: cover; */
+    padding-top: 1rem;
+    z-index: -4;
+}
+
+.m_navs{margin-top: 11rem;}
+
+
+
+.m_inner img:first-child{
+    width: 100%;
+    position: relative;
+    top: 150px;
+    z-index: -1;
+}
+
+.m_navs_i{
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 0 12rem;
+}
+
+.m_navs_i a{text-decoration: none;color: black;}
+
+.m_nav{
+    font-family: 'Ceremonious One';
+    font-weight: 500;
+    width: 30%;
+    height: 200px;
+    background-color: #DDB577;
+    font-size: 65px;
+    border-radius: 25px;
+    box-shadow: 4px 4px 30px 20px rgba(255, 255, 255, 0.3);
+    text-align: center;
+    /* display: flex;
+    justify-content: center;
+    align-items: center; */
+    padding-top: 2rem;
+}
+
+.m_nav span{font-family: 'Bodoni';font-size: 35px;}
+
+.m_nav:nth-child(2){flex-direction: column;}
+
+.m_nav div{
+    width: 100%;
+    height: 100%;
+}
+

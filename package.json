@@ -1,0 +1,27 @@
+{
+  "name": "mstera-project1-zh31n",
+  "version": "1.2.3",
+  "main": "index.js",
+  "repository": "git@github.com:Intetix/mstera-project1-zh31n.git",
+  "author": "Aleksey Solovev <sas@solo-it.ru>",
+  "license": "no MIT",
+  "private": true,
+  "scripts": {
+    "start": "electron .",
+    "test": "echo \"Error: no test specified\" && exit 1",
+    "build": "electron-packager .",
+    "build-mac": "electron-builder -m --arm64",
+    "build-win": "electron-builder -w --x64",
+    "patch": "npm version patch && git push --tag",
+    "minor": "npm version minor && git push --tag",
+    "major": "npm version major && git push --tag"
+  },
+  "devDependencies": {
+    "electron": "^22.0.0",
+    "electron-builder": "^23.6.0",
+    "electron-packager": "^17.1.1"
+  },
+  "dependencies": {
+    "electron-localshortcut": "^3.2.1"
+  }
+}
